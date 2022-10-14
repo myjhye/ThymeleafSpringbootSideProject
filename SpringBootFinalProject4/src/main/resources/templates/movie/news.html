@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style type="text/css">
+.title {
+	font-size: 13.5pt;
+}
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<h1 class="text-center">뉴스 검색</h1>
+		
+		<!-- 검색 창 -->
+		<div class="row row1">
+			<form method="post" action="/movie/news">
+				<input type=text name=ss size=20 class="input-sm" placeholder="검색어를 입력하세요">
+				<input type=submit value="검색">
+			</form>	
+		</div>
+		
+		<!-- 뉴스 제목/내용 -->
+		<div style="height: 20px"></div>
+		<div class="row row1">
+			<table class="table">
+				<tr>
+					<td>
+						<table class="table" th:each="vo:${list}">
+							<tr>
+								<td>
+									<a th:href="${vo.link}">
+										<b><span style="color: black" th:text="${vo.title}" class="title"></span></b>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span th:text="${vo.description}"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+

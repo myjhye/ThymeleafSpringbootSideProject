@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+@import "reset.css";
+
+footer {
+    width: 100%;
+    height: 130px;	
+    position : relative;
+    bottom : 0;
+    transform : translateY(-100%);			
+    margin: 0 auto;
+    text-align: end;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+footer button {
+    width: 100px;
+    height: 40px;
+    margin: 40px 0 5px 8px;
+    border: solid 1px #000;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #000;
+}
+
+.footer_right {
+	margin-right: 3%;
+}
+
+footer button:hover {
+    background-color: black;
+    color: white;
+}
+
+footer hr {
+    border: 0px;
+    border-top: 2px solid;
+    margin: 0 3%;
+}
+</style>
+</head>
+<body>
+<footer style="margin-top: 300px;">
+	<div>
+		<button type="button"><a href="../board/list">자유 게시판</a></button>
+		<button type="button" class='footer_right'><a href="../seoul/news">뉴스 검색</a></button>
+		</div>
+		<div>
+			<hr>
+		</div>
+	<div class='footer_right'>COPYRIGHT © 2022. Jihye Jeong. All rights reserved.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/nav.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div style="height: 100px"></div>
+<h2>상영 예정작</h2>
+<hr>
+<ul class="card-list">
+	<div>
+		<li class="card" th:each="vo:${list2}">
+			<a th:href="@{/movie/detail/(no=${vo.no})/}">
+				<img th:src="${vo.poster}" style="width: 100%" />
+			</a>
+			<a th:href="@{/movie/detail/(no=${vo.no})}">
+				<h4><b th:text="${vo.title}"></b></h4>
+				 <p th:text="${'감독 | ' + vo.director}"></p>
+				<p th:text="${'출연진 | ' + vo.actors}"></p>
+			</a>
+		</li>
+	</div>
+</ul>
+</body>
+</html>

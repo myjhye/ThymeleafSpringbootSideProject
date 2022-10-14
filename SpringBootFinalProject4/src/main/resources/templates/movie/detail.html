@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/detail.css">
+<link rel="stylesheet" href="../css/nav.css">
+<style type="text/css">
+html { font-size: 10px; }
+
+.movie-details {  
+    box-sizing: border-box;  
+    background: #000; 
+    font-family: verdana, arial;  
+    font-size: 1.4rem; color: #fff; 
+    line-height: 1.6em; 
+    box-shadow: 0px 25px 25px -8px rgba(0, 0, 0, .7);
+    padding: 0 0 30px; margin: auto;
+    max-width: 560px; 
+    text-align: -webkit-center; zoom: 1; }
+
+
+.movie-img  { box-sizing: border-box; 
+    overflow: hidden; }
+
+.movie-details img { 
+    border-radius: 0 0 20px 20px; 
+    height: 560px;  width: 100%; 
+    max-width: 550px; }
+
+
+.movie-details .movie-info { 
+    box-sizing: border-box; 
+    margin: 20px; 
+    letter-spacing: 1.2px; }
+    
+
+.movie-info .movie-name {  
+    border-bottom: 1.5px solid rgb(47, 47, 47); 
+    font-size: 2.5rem; font-weight: 700; 
+    line-height: 30px;  }
+
+.about-movie { 
+    color: #d9d9d9; 
+    font-size: 1.3rem; }
+
+
+.movie-details .post-line { 
+    border-bottom: 2.5px solid rgb(47, 47, 47); 
+    padding: 15px 0; }
+
+.post-line span { font-weight: 700; font-size: 1.6rem; }
+body { font-family: sans-serif; }
+
+#main-menu .nav-bar { list-style:none; margin-top: 40px; }
+#main-menu .nav-bar li { display:inline; padding:0 10px; }
+
+#main-menu .nav-bar li a {
+  text-decoration: none;
+  padding-left: 25px;
+  text-transform: uppercase;
+  color: #333;
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+.nav-bar .nav-button-home a { background:url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/home.gif") no-repeat 0px -2px transparent; }
+
+.nav-bar .nav-button-services a { background:url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/services.gif") no-repeat 0px -2px transparent; }
+
+.nav-bar .nav-button-products a { background:url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/products.gif") no-repeat 0px -2px transparent; }
+</style>
+</head>
+<body>
+<div style="height: 100px"></div>
+<h2 th:text="${vo.title + '의  상세 보기'}"></h2>
+<hr>
+<div style="height: 50px"></div>
+<section class="movie-details">
+    <div class="movie-img">
+        <img  th:src="${vo.poster}" /> 
+    </div>
+<div class="movie-info">
+        <span class="movie-name" th:text="${vo.title}">&nbsp; </span> (2022)   
+      <div class="about-movie post-line" th:text="${vo.info}">
+       
+      </div> 
+    
+
+  <div class="post-line">
+     <span th:text="${'감독 | ' + vo.director}"></span>&nbsp; <br/>
+     <span th:text="${'출연진 | ' +vo.actors}"></span>&nbsp; <br/>  
+     <span th:text="${'상영시간 | ' +vo.runtime}"></span>&nbsp; <br/>
+     <span th:text="${'상영 장소 | ' +vo.country}"></span>&nbsp; <br/>
+     <span th:text="${'배급사 | ' +vo.company}"></span>&nbsp;<br/>
+  </div>
+  <br>
+  	<span th:text="${vo.description}"></span>
+ </div>
+ 
+</section>
+</body>
+</html>

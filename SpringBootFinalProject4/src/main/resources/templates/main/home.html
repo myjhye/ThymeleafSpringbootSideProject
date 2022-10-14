@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div style="height: 100px"></div>
+
+<h2 th:text="${cate2}"></h2>
+<hr>
+<ul class="card-list">
+	<div>
+		<li class="card" th:each="vo:${list}">
+			<a th:href="@{/movie/detail/(no=${vo.no})}">
+				<img th:src="${vo.poster}" style="width: 100%" />
+			</a>
+			<a th:href="@{/movie/detail/(no=${vo.no})}">
+				<h4><b th:text="${vo.title}"></b></h4>
+				 <p th:text="${'감독 | ' + vo.director}"></p>
+				<p th:text="${'출연진 | ' + vo.actors}"></p>
+			</a>
+		</li>
+	</div>
+</ul>
+
+<div class="row">
+  <div class="text-center">
+    <a th:href="@{/main(cate=${cate},page=${curpage>1?curpage-1:curpage})}"><img src="../image/이전.png" style="width: 100px; height: 35px"></a>
+    <span th:text="${curpage}"></span> page / <span th:text="${totalpage}"></span> pages
+    <a th:href="@{/main(cate=${cate}, page=${curpage<totalpage?curpage+1:curpage})}"><img src="../image/다음.png" style="width: 100px; height: 35px"></a>
+  </div>
+</div>
+
+</body>
+</html>
