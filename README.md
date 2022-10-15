@@ -15,7 +15,7 @@ cate 컬럼으로 분류<br>
 
 
 <h1>영화 자유 게시판</h1>
-![screencapture-localhost-board-list-2022-10-16-00_54_37](https://user-images.githubusercontent.com/107673658/195996032-7c82a4d4-46fb-423e-a053-8ae0a843b28c.png)
+![image](https://user-images.githubusercontent.com/107673658/195996126-e6ce19fb-d6cc-4088-b903-4f059201c600.png)
 
 ![screencapture-localhost-board-detail-2022-10-16-00_54_55](https://user-images.githubusercontent.com/107673658/195995949-e1d23922-5991-4081-b769-ae4950550f59.png)
 
@@ -24,3 +24,11 @@ cate 컬럼으로 분류<br>
 
 
 목록, 조회, 수정, 삭제 기능
+
+
+
+<h1>뉴스 검색</h1>
+![image](https://user-images.githubusercontent.com/107673658/195996143-4adaa758-8676-4797-9068-9548bb605007.png)
+
+
+관련 검색어 입력 시 뉴스 목록 출력
