@@ -28,7 +28,7 @@ public class BoardEntity {
    @PrePersist
    public void regdate()
    {
-	   regdate=LocalDateTime.now();
+	   regdate = LocalDateTime.now();
    }
    /*@PrePersist
    public void hit()
