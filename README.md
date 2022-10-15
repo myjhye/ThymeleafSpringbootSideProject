@@ -12,6 +12,10 @@ cate 컬럼으로 분류<br>
 페이징
 
 
+<h1>상세 보기</h1>
+![screencapture-localhost-movie-detail-2022-10-16-01_00_45](https://user-images.githubusercontent.com/107673658/195996224-9d337442-52a1-4637-88ac-f6460009a1e7.png)
+
+
 
 
 <h1>영화 자유 게시판</h1>
